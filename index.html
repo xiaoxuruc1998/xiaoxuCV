@@ -7,7 +7,6 @@
     <style>
         /* 设置通用字体 */
         body {
-            font-family: 'Arial','楷体', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f6f9;
@@ -200,7 +199,6 @@
 <!-- 滚动生活照 -->
 <h2 class="section-title">生活照 | Life Photos</h2>
 <div class="life-photo-wrapper" style="overflow: hidden;">
-    <button class="arrow left" onclick="scrollLeft()">‹</button>
     <div class="life-photo-container" id="photo-container" style="display: flex; overflow-x: scroll; scroll-behavior: smooth;">
         <img src="./life_photo1.jpg" alt="Life Photo 1">
         <img src="./life_photo2.jpg" alt="Life Photo 2">
@@ -210,9 +208,7 @@
         <img src="./life_photo6.jpg" alt="Life Photo 6">
         <img src="./life_photo8.jpg" alt="Life Photo 7">
     </div>
-    <button class="arrow right" onclick="scrollRight()">›</button>
 </div>
-
 <script>
     const container = document.getElementById('photo-container');
 
