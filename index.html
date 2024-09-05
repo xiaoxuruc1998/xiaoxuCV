@@ -22,8 +22,8 @@
             border-radius: 10px;
             margin-top: 50px;
             display: flex;
-            padding-left: 60px;  /* 左右增加空隙 */
-            padding-right: 60px; /* 左右增加空隙 */
+            padding-left: 120px;  /* 左右增加空隙 */
+            padding-right: 120px; /* 左右增加空隙 */
         }
         h1 {
             text-align: center;
@@ -197,42 +197,43 @@
             <li class="english">Interests: GuZheng (Level 9 Amateur), Hulusi (Level 7 Amateur), Volleyball, Swimming, Public Welfare Activities</li>
         </ul>
     
-    <!-- 滚动生活照 -->
-    <h2 class="section-title">生活照 | Life Photos</h2>
-    <div class="life-photo-wrapper">
-        <button class="arrow left" onclick="scrollLeft()">‹</button>
-        <div class="life-photo-container" id="photo-container">
-            <img src="./life_photo1.jpg" alt="Life Photo 1">
-            <img src="./life_photo2.jpg" alt="Life Photo 2">
-            <img src="./life_photo3.jpg" alt="Life Photo 3">
-            <img src="./life_photo4.jpg" alt="Life Photo 4">
-            <img src="./life_photo5.jpg" alt="Life Photo 5">
-            <img src="./life_photo6.jpg" alt="Life Photo 6">
-            <img src="./life_photo8.jpg" alt="Life Photo 7">
-        </div>
-        <button class="arrow right" onclick="scrollRight()">›</button>
+<!-- 滚动生活照 -->
+<h2 class="section-title">生活照 | Life Photos</h2>
+<div class="life-photo-wrapper">
+    <button class="arrow left" onclick="scrollLeft()">‹</button>
+    <div class="life-photo-container" id="photo-container">
+        <img src="./life_photo1.jpg" alt="Life Photo 1">
+        <img src="./life_photo2.jpg" alt="Life Photo 2">
+        <img src="./life_photo3.jpg" alt="Life Photo 3">
+        <img src="./life_photo4.jpg" alt="Life Photo 4">
+        <img src="./life_photo5.jpg" alt="Life Photo 5">
+        <img src="./life_photo6.jpg" alt="Life Photo 6">
+        <img src="./life_photo8.jpg" alt="Life Photo 7">
     </div>
+    <button class="arrow right" onclick="scrollRight()">›</button>
+</div>
 
-    <script>
-        let scrollAmount = 0;
-        const container = document.getElementById('photo-container');
+<script>
+    let scrollAmount = 0;
+    const container = document.getElementById('photo-container');
 
-        function scrollLeft() {
-            scrollAmount -= 310;  // 每次向左滚动的距离
-            if (scrollAmount < 0) {
-                scrollAmount = 0;
-            }
-            container.style.transform = `translateX(-${scrollAmount}px)`;
+    function scrollLeft() {
+        const maxScroll = container.scrollWidth - container.clientWidth; 
+        scrollAmount -= 310; // 向左滚动
+        if (scrollAmount < 0) {
+            scrollAmount = 0; // 防止滚动超出左边界
         }
+        container.style.transform = `translateX(-${scrollAmount}px)`;
+    }
 
-        function scrollRight() {
-            scrollAmount += 310;  // 每次向右滚动的距离
-            const maxScroll = container.scrollWidth - container.clientWidth;
-            if (scrollAmount > maxScroll) {
-                scrollAmount = maxScroll;
-            }
-            container.style.transform = `translateX(-${scrollAmount}px)`;
+    function scrollRight() {
+        const maxScroll = container.scrollWidth - container.clientWidth;
+        scrollAmount += 310; // 向右滚动
+        if (scrollAmount > maxScroll) {
+            scrollAmount = maxScroll; // 防止滚动超出右边界
         }
-    </script>
+        container.style.transform = `translateX(-${scrollAmount}px)`;
+    }
+</script>
 </body>
 </html>
