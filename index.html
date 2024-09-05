@@ -69,7 +69,7 @@
         /* 中文字体设置为楷体或宋体 */
         body, ul li {
             font-family: 'KaiTi', '楷体', 'SimSun', '宋体', serif;
-            font-size: 13px; /* 较小的中文字体 */
+            font-size: 15px; /* 较小的中文字体 */
         }
         /* 英文字体设置为 Arial */
         h1, h2, .english {
@@ -79,6 +79,24 @@
         .main-content {
             padding-left: 150px; /* 为主要内容添加左右空隙 */
             padding-right: 150px;
+        }
+        .life-photo-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .life-photo-container {
+            display: flex;
+            overflow-x: auto; /* 允许横向滚动 */
+            scroll-behavior: smooth; /* 平滑滚动效果 */
+            gap: 10px;
+            padding: 10px;
+        }
+        .life-photo-container img {
+            width: 300px;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -162,29 +180,19 @@
             <li class="english">Interests: GuZheng (Level 9 Amateur), Hulusi (Level 7 Amateur), Volleyball, Swimming, Public Welfare Activities</li>
         </ul>
     
-<!-- 滚动生活照 -->
-<h2 class="section-title">生活照 | Life Photos</h2>
-<div class="life-photo-wrapper" style="overflow: hidden;">
-    <div class="life-photo-container" id="photo-container" style="display: flex; overflow-x: scroll; scroll-behavior: smooth;">
-        <img src="./life_photo1.jpg" alt="Life Photo 1">
-        <img src="./life_photo2.jpg" alt="Life Photo 2">
-        <img src="./life_photo3.jpg" alt="Life Photo 3">
-        <img src="./life_photo4.jpg" alt="Life Photo 4">
-        <img src="./life_photo5.jpg" alt="Life Photo 5">
-        <img src="./life_photo6.jpg" alt="Life Photo 6">
-        <img src="./life_photo8.jpg" alt="Life Photo 7">
+    <!-- 滚动生活照 -->
+    <h2 class="section-title">生活照 | Life Photos</h2>
+    <div class="life-photo-wrapper">
+        <div class="life-photo-container" id="photo-container">
+            <img src="./life_photo1.jpg" alt="Life Photo 1">
+            <img src="./life_photo2.jpg" alt="Life Photo 2">
+            <img src="./life_photo3.jpg" alt="Life Photo 3">
+            <img src="./life_photo4.jpg" alt="Life Photo 4">
+            <img src="./life_photo5.jpg" alt="Life Photo 5">
+            <img src="./life_photo6.jpg" alt="Life Photo 6">
+            <img src="./life_photo8.jpg" alt="Life Photo 7">
+        </div>
     </div>
-</div>
-<script>
-    const container = document.getElementById('photo-container');
-
-    function scrollLeft() {
-        container.scrollLeft -= 310; // 每次向左滚动的距离
-    }
-
-    function scrollRight() {
-        container.scrollLeft += 310; // 每次向右滚动的距离
-    }
-</script>
+        
 </body>
 </html>
