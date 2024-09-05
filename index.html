@@ -64,37 +64,56 @@
         }
         .section-title {
             font-size: 20px;
-            color: #e91e63; /* 粉红色标题 */
+            color: #e91e63;
             margin-top: 30px;
         }
         /* 中文字体设置为楷体 */
         body, li {
             font-family: '楷体', serif;
         }
-        /* 英文字体更新为与个人网页框内一致 */
-        h1, h2, .info-container li, .info-container h2, .info-container h1 {
+        /* 英文字体设置为与个人信息一致的 Arial */
+        h1, h2, ul li, .english {
             font-family: 'Arial', sans-serif;
-        }
-        .info-container li {
-            font-size: 14px; /* 中文字体略小 */
         }
         .english {
-            font-family: 'Arial', sans-serif;
             font-size: 16px; /* 英文字体略大 */
         }
+        .main-content {
+            padding-left: 30px; /* 为主要内容添加左右空隙 */
+            padding-right: 30px;
+        }
+        .life-photo-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
         .life-photo-container {
-            overflow-x: scroll;
             display: flex;
-            gap: 20px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
+            transition: transform 0.5s ease-in-out;
         }
         .life-photo-container img {
             width: 300px;
             height: auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
+            margin-right: 10px;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
         }
     </style>
 </head>
@@ -111,72 +130,71 @@
             <h2 class="section-title">个人信息 | Personal Information</h2>
             <ul>
                 <li>地址：北京市海淀区中关村大街59号中国人民大学 邮编：100872</li>
-                <li class="english">Address: No. 59, Zhongguancun Street, Haidian District, Beijing, China Renmin University, 100872</li>
-                <li>联系电话：18810100279</li>
-                <li class="english">Phone: +86 18810100279</li>
-                <li>电子邮件: 2021000950@ruc.edu.cn</li>
-                <li class="english">Email: 2021000950@ruc.edu.cn</li>
+                <li class="english">Address: No. 59, Zhongguancun Street, Haidian District, Beijing, China Renmin University</li>
+                <li>联系电话 (Phone)：18810100279</li>
+                <li>电子邮件 (Email): 2021000950@ruc.edu.cn; xingxiaoxu@pku.edu.cn</li>
             </ul>
         </div>
     </div>
 
+    <div class="main-content">
         <h2 class="section-title">教育背景 | Education</h2>
         <ul>
             <li>2021.09-至今：中国人民大学 应用经济学院 区域经济学 博士生</li>
-            <li>Sep. 2021-Present: Ph.D. in Regional Economics, School of Applied Economics, Renmin University of China</li>
+            <li class="english">Sep. 2021-Present: Ph.D. in Regional Economics, School of Applied Economics, Renmin University of China</li>
             <li>2019.09-2021.06：北京大学 软件与微电子学院 金融科技 工程硕士</li>
-            <li>Sep. 2019-Jun. 2021: Master's in Financial Technology, School of Software & Microelectronics, Peking University</li>
+            <li class="english">Sep. 2019-Jun. 2021: Master's in Financial Technology, School of Software & Microelectronics, Peking University</li>
             <li>2015.09-2019.06：山东大学 经济学院 国际经济与金融 经济学学士</li>
-            <li>Sep. 2015-Jun. 2019: B.A. in International Economics & Finance, School of Economics, Shandong University</li>
+            <li class="english">Sep. 2015-Jun. 2019: B.A. in International Economics & Finance, School of Economics, Shandong University</li>
         </ul>
 
         <h2 class="section-title">论文情况 | Publications</h2>
         <ul>
-            <li><a href="./paper1.pdf" target="_blank">[1] Xiaoxu, X. Qiangmin*, and S. Weihao. Impact of urban compactness on carbon emission in Chinese cities: From moderating effects of industrial diversity and job-housing imbalances. Land Use Policy, 2024 (143): 107213. (SSCI:一区)</a></li>
-            <li><a href="./paper2.pdf" target="_blank">[2] Xiaoxu, X, S. Weihao, and Z. Yaojun*. Towards a more compact urban form: A spatial-temporal study on the multi-dimensional compactness index of urban form in China. Applied Geography, 2014 (171): 103368. (SSCI:一区)</a></li>
-            <li><a href="./paper3.pdf" target="_blank">[3] Jiuwen S., Xiaoxu, X. Qiangmin*, and S. Weihao. Impact of urban form on housing affordability stress in Chinese cities: Does public service efficiency matter? Cities, 2024 (145): 104682. (SSCI:一区) (导师一作)</a></li>
-            <li><a href="./paper4.pdf" target="_blank">[4] 冯科, 邢晓旭*. 业绩对赌协议对并购溢价和市场反应的影响. 金融研究, 2023(01): 188-206. (CSSCI: A)</a>
-                <br>Feng Ke, Xiaoxu Xing*. The Impact of Performance Bet Agreements on M&A Premiums and Market Reactions. Financial Research, 2023(01): 188-206. (CSSCI: A)</li>
-            <li><a href="./paper5.pdf" target="_blank">[5] 孙久文, 邢晓旭*. 国土空间体系和区域经济布局的协同路径和优化方向. 经济学家, 2023(08): 54-64. (CSSCI: B)</a>
-                <br>Sun Jiuwen, Xiaoxu Xing*. Coordinated Pathways and Optimization Directions for the National Spatial System and Regional Economic Layout. Economist, 2023(08): 54-64. (CSSCI: B)</li>
-            <li><a href="./paper6.pdf" target="_blank">[6] 孙久文, 邢晓旭. 中国式现代化下县域经济高质量发展的理论与实践. 齐鲁学刊, 2024(01): 111-121. (CSSCI)</a>
-                <br>Sun Jiuwen, Xiaoxu Xing. Theories and Practices of High-Quality Development of County Economies in Chinese Modernization. Qilu Journal, 2024(01): 111-121. (CSSCI)</li>
-            <li><a href="./paper7.pdf" target="_blank">[7] 孙久文, 邢晓旭. 京津冀产业协同发展的成效、挑战和展望. 天津社会科学, 2024(01): 48-57. (CSSCI)</a>
-                <br>Sun Jiuwen, Xiaoxu Xing. Achievements, Challenges, and Prospects of Industrial Coordination in the Beijing-Tianjin-Hebei Region. Tianjin Social Sciences, 2024(01): 48-57. (CSSCI)</li>
-            <li><a href="./paper8.pdf" target="_blank">[8] 孙久文, 邢晓旭. 现代化首都都市圈发展的基本特征与高质量发展路径. 北京社会科学, 2023(06): 17-27. (CSSCI)</a>
-                <br>Sun Jiuwen, Xiaoxu Xing. Key Characteristics and High-Quality Development Paths of the Modernized Capital Metropolitan Area. Beijing Social Sciences, 2023(06): 17-27. (CSSCI)</li>
-            <li><a href="./paper9.pdf" target="_blank">[9] 孙久文, 邢晓旭*. 北交所赋能北京产业结构优化的作用渠道与战略构想. 经济与管理, 2023 37(04): 20-28. (CSSCI 扩)</a>
-                <br>Sun Jiuwen, Xiaoxu Xing*. Strategic Conceptions and Channels for Optimizing Beijing’s Industrial Structure Empowered by the Beijing Stock Exchange. Economics and Management, 2023 37(04): 20-28. (CSSCI Expanded)</li>
-            <li><a href="./paper10.pdf" target="_blank">[10] 文余源, 刘洋*, 邢晓旭, 周祖培. 人口收缩视角下中国产业集聚与城市人口规模演化及其关系. 经济地理, 2023 (CSSCI: B)</a>
-                <br>Wen Yuyuan, Liu Yang*, Xing Xiaoxu, Zhou Zupei. Industrial Agglomeration and Urban Population Size Evolution from the Perspective of Population Shrinkage in China. Economic Geography, 2023. (CSSCI: B)</li>
+            <li class="english"><a href="./paper1.pdf" target="_blank">[1] Xiaoxu, X. Qiangmin*, and S. Weihao. Impact of urban compactness on carbon emission in Chinese cities: From moderating effects of industrial diversity and job-housing imbalances. Land Use Policy, 2024 (143): 107213. (SSCI:一区)</a></li>
+            <li class="english"><a href="./paper2.pdf" target="_blank">[2] Xiaoxu, X, S. Weihao, and Z. Yaojun*. Towards a more compact urban form: A spatial-temporal study on the multi-dimensional compactness index of urban form in China. Applied Geography, 2014 (171): 103368. (SSCI:一区)</a></li>
+            <li class="english"><a href="./paper3.pdf" target="_blank">[3] Jiuwen S., Xiaoxu, X. Qiangmin*, and S. Weihao. Impact of urban form on housing affordability stress in Chinese cities: Does public service efficiency matter? Cities, 2024 (145): 104682. (SSCI:一区)</a></li>
+            <li><a href="./paper4.pdf" target="_blank">[4] 冯科, 邢晓旭*. 业绩对赌协议对并购溢价和市场反应的影响. 金融研究, 2023(01): 188-206. (CSSCI: A)
+                <br><span class="english">Feng Ke, Xiaoxu Xing*. The Impact of Performance Bet Agreements on M&A Premiums and Market Reactions. Financial Research, 2023(01): 188-206. (CSSCI: A)</span></li>
+            <li><a href="./paper5.pdf" target="_blank">[5] 孙久文, 邢晓旭*. 国土空间体系和区域经济布局的协同路径和优化方向. 经济学家, 2023(08): 54-64. (CSSCI: B)
+                <br><span class="english">Sun Jiuwen, Xiaoxu Xing*. Coordinated Pathways and Optimization Directions for the National Spatial System and Regional Economic Layout. Economist, 2023(08): 54-64. (CSSCI: B)</span></li>
+            <li><a href="./paper6.pdf" target="_blank">[6] 孙久文, 邢晓旭. 中国式现代化下县域经济高质量发展的理论与实践. 齐鲁学刊, 2024(01): 111-121. (CSSCI)
+                <br><span class="english">Sun Jiuwen, Xiaoxu Xing. Theories and Practices of High-Quality Development of County Economies in Chinese Modernization. Qilu Journal, 2024(01): 111-121. (CSSCI)</span></li>
+            <li><a href="./paper7.pdf" target="_blank">[7] 孙久文, 邢晓旭. 京津冀产业协同发展的成效、挑战和展望. 天津社会科学, 2024(01): 48-57. (CSSCI)
+                <br><span class="english">Sun Jiuwen, Xiaoxu Xing. Achievements, Challenges, and Prospects of Industrial Coordination in the Beijing-Tianjin-Hebei Region. Tianjin Social Sciences, 2024(01): 48-57. (CSSCI)</span></li>
+            <li><a href="./paper8.pdf" target="_blank">[8] 孙久文, 邢晓旭. 现代化首都都市圈发展的基本特征与高质量发展路径. 北京社会科学, 2023(06): 17-27. (CSSCI)
+                <br><span class="english">Sun Jiuwen, Xiaoxu Xing. Key Characteristics and High-Quality Development Paths of the Modernized Capital Metropolitan Area. Beijing Social Sciences, 2023(06): 17-27. (CSSCI)</span></li>
+            <li><a href="./paper9.pdf" target="_blank">[9] 孙久文, 邢晓旭*. 北交所赋能北京产业结构优化的作用渠道与战略构想. 经济与管理, 2023 37(04): 20-28. (CSSCI 扩)
+                <br><span class="english">Sun Jiuwen, Xiaoxu Xing*. Strategic Conceptions and Channels for Optimizing Beijing’s Industrial Structure Empowered by the Beijing Stock Exchange. Economics and Management, 2023 37(04): 20-28. (CSSCI Expanded)</span></li>
+            <li><a href="./paper10.pdf" target="_blank">[10] 文余源, 刘洋*, 邢晓旭, 周祖培. 人口收缩视角下中国产业集聚与城市人口规模演化及其关系. 经济地理, 2023 (CSSCI: B)
+                <br><span class="english">Wen Yuyuan, Liu Yang*, Xing Xiaoxu, Zhou Zupei. Industrial Agglomeration and Urban Population Size Evolution from the Perspective of Population Shrinkage in China. Economic Geography, 2023. (CSSCI: B)</span></li>
         </ul>
 
         <h2 class="section-title">实习经历 | Internship Experience</h2>
         <ul>
             <li>2020.04-2020.07：保利资本股权投资部 投资助理</li>
-            <li>Apr. 2020-Jul. 2020: Investment Assistant, Poly Capital Private Equity</li>
+            <li class="english">Apr. 2020-Jul. 2020: Investment Assistant, Poly Capital Private Equity</li>
             <li>2019.04-2019.06：中泰证券 投行委债券发行部 项目助理</li>
-            <li>Apr. 2019-Jun. 2019: Project Assistant, Zhongtai Securities, Bond Issuance Department</li>
+            <li class="english">Apr. 2019-Jun. 2019: Project Assistant, Zhongtai Securities, Bond Issuance Department</li>
             <li>2018.12-2019.03：零点有数房地产事业部 咨询师助理</li>
-            <li>Dec. 2018-Mar. 2019: Consultant Assistant, Lingdian Market Research, Real Estate Division</li>
+            <li class="english">Dec. 2018-Mar. 2019: Consultant Assistant, Lingdian Market Research, Real Estate Division</li>
             <li>2018.01-2018.03：安永华明会计师事务所 审计师助理</li>
-            <li>Jan. 2018-Mar. 2018: Audit Assistant, Ernst & Young Hua Ming LLP</li>
+            <li class="english">Jan. 2018-Mar. 2018: Audit Assistant, Ernst & Young Hua Ming LLP</li>
         </ul>
-        
+
         <h2 class="section-title">技能与兴趣 | Skills & Interests</h2>
         <ul>
             <li>计算机技能：熟练使用 Stata, SPSS, Matlab, PS, PR；熟悉 Python 和 R 语言</li>
-            <li>Computer Skills: Proficient in Stata, SPSS, Matlab, Photoshop, Premiere; Familiar with Python and R</li>
+            <li class="english">Computer Skills: Proficient in Stata, SPSS, Matlab, Photoshop, Premiere; Familiar with Python and R</li>
             <li>英语能力：CET-4: 632, CET-6: 515, IELTS: 6.5</li>
-            <li>English Proficiency: CET-4: 632, CET-6: 515, IELTS: 6.5</li>
+            <li class="english">English Proficiency: CET-4: 632, CET-6: 515, IELTS: 6.5</li>
             <li>证书：
                 <a href="acca.pdf" target="_blank">ACCA（12/14）</a>，
                 <a href="cfa1.pdf" target="_blank">CFA I</a>，
                 <a href="mathmodel.pdf" target="_blank">美国大学生数学建模大赛 M 奖</a>, 全国计算机二级
             </li>
-            <li>Certifications: ACCA (12/14), CFA Level 1, American Mathematical Contest in Modeling (M Award), National Computer Rank Examination Level 2,</li>
+            <li class="english">Certifications: ACCA (12/14), CFA Level 1, American Mathematical Contest in Modeling (M Award), National Computer Rank Examination Level 2</li>
             <li>兴趣爱好：古筝（业余9级），葫芦丝（业余7级），排球，游泳，公益活动</li>
-            <li>Interests: GuZheng (Level 9 Amateur), Hulusi (Level 7 Amateur), Volleyball, Swimming, Public Welfare Activities</li>
+            <li class="english">Interests: GuZheng (Level 9 Amateur), Hulusi (Level 7 Amateur), Volleyball, Swimming, Public Welfare Activities</li>
         </ul>
     
     <!-- 滚动生活照 -->
