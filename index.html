@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>邢晓旭的个人网页 | Xiaoxu Xing's Personal Page</title>
+    <title>邢晓旭 | Xiaoxu Xing</title>
     <style>
         /* 设置通用字体 */
         body {
@@ -22,6 +22,8 @@
             border-radius: 10px;
             margin-top: 50px;
             display: flex;
+            padding-left: 30px;  /* 左右增加空隙 */
+            padding-right: 30px; /* 左右增加空隙 */
         }
         h1 {
             text-align: center;
@@ -69,20 +71,24 @@
         body, li {
             font-family: '楷体', serif;
         }
-        /* 英文字体更新为 Arial 和 Helvetica */
+        /* 英文字体更新为与个人网页框内一致 */
         h1, h2, .info-container li, .info-container h2, .info-container h1 {
-            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-family: 'Arial', sans-serif;
         }
         .info-container li {
             font-size: 14px; /* 中文字体略小 */
         }
         .english {
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Arial', sans-serif;
             font-size: 16px; /* 英文字体略大 */
         }
         .life-photo-container {
-            text-align: center;
-            margin-top: 50px;
+            overflow-x: scroll;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
         }
         .life-photo-container img {
             width: 300px;
@@ -99,8 +105,8 @@
         </div>
 
         <div class="info-container">
-            <h1>邢晓旭的个人网页</h1>
-            <h1 class="english">Xiaoxu Xing's Personal Page</h1>
+            <h1>邢晓旭</h1>
+            <h1 class="english">Xiaoxu Xing</h1>
 
             <h2 class="section-title">个人信息 | Personal Information</h2>
             <ul>
@@ -172,16 +178,43 @@
             <li>兴趣爱好：古筝（业余9级），葫芦丝（业余7级），排球，游泳，公益活动</li>
             <li>Interests: GuZheng (Level 9 Amateur), Hulusi (Level 7 Amateur), Volleyball, Swimming, Public Welfare Activities</li>
         </ul>
-     <!-- 增加生活照的部分 -->
-    <div class="life-photo-container">
-        <h2 class="section-title">生活照 | Life Photos</h2>
-        <img src="./life_photo1.jpg" alt="Life Photo 1">
-        <img src="./life_photo2.jpg" alt="Life Photo 2">
-        <img src="./life_photo3.jpg" alt="Life Photo 3">
-        <img src="./life_photo4.jpg" alt="Life Photo 4">
-        <img src="./life_photo5.jpg" alt="Life Photo 5">
-        <img src="./life_photo6.jpg" alt="Life Photo 6">
-        <img src="./life_photo8.jpg" alt="Life Photo 8">
+    
+    <!-- 滚动生活照 -->
+    <h2 class="section-title">生活照 | Life Photos</h2>
+    <div class="life-photo-wrapper">
+        <button class="arrow left" onclick="scrollLeft()">‹</button>
+        <div class="life-photo-container" id="photo-container">
+            <img src="./life_photo1.jpg" alt="Life Photo 1">
+            <img src="./life_photo2.jpg" alt="Life Photo 2">
+            <img src="./life_photo3.jpg" alt="Life Photo 3">
+            <img src="./life_photo4.jpg" alt="Life Photo 4">
+            <img src="./life_photo5.jpg" alt="Life Photo 5">
+            <img src="./life_photo6.jpg" alt="Life Photo 6">
+            <img src="./life_photo8.jpg" alt="Life Photo 7">
+        </div>
+        <button class="arrow right" onclick="scrollRight()">›</button>
     </div>
+
+    <script>
+        let scrollAmount = 0;
+        const container = document.getElementById('photo-container');
+
+        function scrollLeft() {
+            scrollAmount -= 310;  // 每次向左滚动的距离
+            if (scrollAmount < 0) {
+                scrollAmount = 0;
+            }
+            container.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+
+        function scrollRight() {
+            scrollAmount += 310;  // 每次向右滚动的距离
+            const maxScroll = container.scrollWidth - container.clientWidth;
+            if (scrollAmount > maxScroll) {
+                scrollAmount = maxScroll;
+            }
+            container.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+    </script>
 </body>
 </html>
