@@ -21,12 +21,12 @@
             border-radius: 10px;
             margin-top: 50px;
             display: flex;
-            padding-left: 50px;  /* 左右增加空隙 */
-            padding-right: 50px; /* 左右增加空隙 */
+            padding-left: 30px;  /* 左右增加空隙 */
+            padding-right: 30px; /* 左右增加空隙 */
         }
         h1 {
             text-align: center;
-            font-size: 32px;
+            font-size: 30px;
             margin-bottom: 20px;
             color: #2c3e50;
         }
@@ -35,7 +35,7 @@
             padding-bottom: 10px;
             margin-bottom: 20px;
             color: #e91e63;
-            font-size: 24px;
+            font-size: 22px;
         }
         ul {
             list-style-type: none;
@@ -44,7 +44,7 @@
         }
         ul li {
             margin-bottom: 10px;
-            line-height: 1.8;
+            line-height: 1.6;
         }
         .photo-container {
             text-align: center;
@@ -66,53 +66,19 @@
             color: #e91e63;
             margin-top: 30px;
         }
-        /* 中文字体设置为楷体 */
-        body, li {
-            font-family: '楷体', '宋体';
+        /* 中文字体设置为楷体或宋体 */
+        body, ul li {
+            font-family: 'KaiTi', '楷体', 'SimSun', '宋体', serif;
+            font-size: 13px; /* 较小的中文字体 */
         }
-        /* 英文字体设置为与个人信息一致的 Arial */
-        h1, h2, ul li, .english {
+        /* 英文字体设置为 Arial */
+        h1, h2, .english {
             font-family: 'Arial', sans-serif;
-        }
-        .english {
-            font-size: 16px; /* 英文字体略大 */
+            font-size: 14px; /* 较小的英文字体 */
         }
         .main-content {
             padding-left: 150px; /* 为主要内容添加左右空隙 */
             padding-right: 150px;
-        }
-        .life-photo-wrapper {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-        }
-        .life-photo-container {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .life-photo-container img {
-            width: 300px;
-            height: auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            margin-right: 10px;
-        }
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 1;
-        }
-        .arrow.left {
-            left: 10px;
-        }
-        .arrow.right {
-            right: 10px;
         }
     </style>
 </head>
@@ -129,7 +95,7 @@
             <h2 class="section-title">个人信息 | Personal Information</h2>
             <ul>
                 <li>地址：北京市海淀区中关村大街59号中国人民大学 邮编：100872</li>
-                <li class="english">Address: No. 59, Zhongguancun Street, Haidian District, Beijing, China Renmin University</li>
+                <li class="english">Address: No.59, Zhongguancun Street, Haidian District, Beijing, Renmin University of China</li>
                 <li>联系电话 (Phone)：18810100279</li>
                 <li>电子邮件 (Email): 2021000950@ruc.edu.cn; xingxiaoxu@pku.edu.cn</li>
             </ul>
