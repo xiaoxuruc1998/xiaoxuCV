@@ -21,6 +21,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             margin-top: 50px;
+            display: flex;
         }
         h1 {
             text-align: center;
@@ -47,6 +48,7 @@
         .photo-container {
             text-align: center;
             margin-bottom: 30px;
+            flex: 1;
         }
         .photo-container img {
             width: 200px;
@@ -54,32 +56,63 @@
             border-radius: 50%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+        .info-container {
+            flex: 2;
+            padding-left: 20px;
+        }
         .section-title {
             font-size: 20px;
             color: #e91e63; /* 粉红色标题 */
             margin-top: 30px;
+        }
+        /* 中文字体设置为楷体 */
+        body, li {
+            font-family: '楷体', serif;
+        }
+        /* 英文字体设置为 Times New Roman，并且比中文字体大 */
+        h1, h2, .info-container li, .info-container h2, .info-container h1 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .info-container li {
+            font-size: 14px; /* 中文字体略小 */
+        }
+        .english {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px; /* 英文字体略大 */
+        }
+        .life-photo-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .life-photo-container img {
+            width: 300px;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="photo-container">
-            <!-- 图片路径改为相对路径或者上传到服务器后设置URL -->
             <img src="./5b048c41c267baa724e258912162cf5.jpg" alt="Xiaoxu Xing's Photo">
         </div>
 
-        <h1>邢晓旭的个人网页</h1>
-        <h1>Xiaoxu Xing's Personal Page</h1>
+        <div class="info-container">
+            <h1>邢晓旭的个人网页</h1>
+            <h1 class="english">Xiaoxu Xing's Personal Page</h1>
 
-        <h2 class="section-title">个人信息 | Personal Information</h2>
-        <ul>
-            <li>地址：北京市海淀区中关村大街59号中国人民大学 邮编：100872</li>
-            <li>Address: No. 59, Zhongguancun Street, Haidian District, Beijing, China Renmin University, 100872</li>
-            <li>联系电话：18810100279</li>
-            <li>Phone: +86 18810100279</li>
-            <li>电子邮件: 2021000950@ruc.edu.cn</li>
-            <li>Email: 2021000950@ruc.edu.cn</li>
-        </ul>
+            <h2 class="section-title">个人信息 | Personal Information</h2>
+            <ul>
+                <li>地址：北京市海淀区中关村大街59号中国人民大学 邮编：100872</li>
+                <li class="english">Address: No. 59, Zhongguancun Street, Haidian District, Beijing, China Renmin University, 100872</li>
+                <li>联系电话：18810100279</li>
+                <li class="english">Phone: +86 18810100279</li>
+                <li>电子邮件: 2021000950@ruc.edu.cn</li>
+                <li class="english">Email: 2021000950@ruc.edu.cn</li>
+            </ul>
+        </div>
+    </div>
 
         <h2 class="section-title">教育背景 | Education</h2>
         <ul>
@@ -96,20 +129,20 @@
             <li><a href="./paper1.pdf" target="_blank">[1] Xiaoxu, X. Qiangmin*, and S. Weihao. Impact of urban compactness on carbon emission in Chinese cities: From moderating effects of industrial diversity and job-housing imbalances. Land Use Policy, 2024 (143): 107213. (SSCI:一区)</a></li>
             <li><a href="./paper2.pdf" target="_blank">[2] Xiaoxu, X, S. Weihao, and Z. Yaojun*. Towards a more compact urban form: A spatial-temporal study on the multi-dimensional compactness index of urban form in China. Applied Geography, 2014 (171): 103368. (SSCI:一区)</a></li>
             <li><a href="./paper3.pdf" target="_blank">[3] Jiuwen S., Xiaoxu, X. Qiangmin*, and S. Weihao. Impact of urban form on housing affordability stress in Chinese cities: Does public service efficiency matter? Cities, 2024 (145): 104682. (SSCI:一区) (导师一作)</a></li>
-            <li><a href="./paper4.pdf" target="_blank">[4] 冯科, 邢晓旭*. 业绩对赌协议对并购溢价和市场反应的影响. 金融研究, 2023(01): 188-206. (CSSCI: A)
-                <br>Feng Ke, Xiaoxu Xing*. The Impact of Performance Bet Agreements on M&A Premiums and Market Reactions. Financial Research, 2023(01): 188-206. (CSSCI: A)</a></li>
-            <li><a href="./paper5.pdf" target="_blank">[5] 孙久文, 邢晓旭*. 国土空间体系和区域经济布局的协同路径和优化方向. 经济学家, 2023(08): 54-64. (CSSCI: B)
-                <br>Sun Jiuwen, Xiaoxu Xing*. Coordinated Pathways and Optimization Directions for the National Spatial System and Regional Economic Layout. Economist, 2023(08): 54-64. (CSSCI: B)</a></li>
-            <li><a href="./paper6.pdf" target="_blank">[6] 孙久文, 邢晓旭. 中国式现代化下县域经济高质量发展的理论与实践. 齐鲁学刊, 2024(01): 111-121. (CSSCI)
-                <br>Sun Jiuwen, Xiaoxu Xing. Theories and Practices of High-Quality Development of County Economies in Chinese Modernization. Qilu Journal, 2024(01): 111-121. (CSSCI)</a></li>
-            <li><a href="./paper7.pdf" target="_blank">[7] 孙久文, 邢晓旭. 京津冀产业协同发展的成效、挑战和展望. 天津社会科学, 2024(01): 48-57. (CSSCI)
-                <br>Sun Jiuwen, Xiaoxu Xing. Achievements, Challenges, and Prospects of Industrial Coordination in the Beijing-Tianjin-Hebei Region. Tianjin Social Sciences, 2024(01): 48-57. (CSSCI)</a></li>
-            <li><a href="./paper8.pdf" target="_blank">[8] 孙久文, 邢晓旭. 现代化首都都市圈发展的基本特征与高质量发展路径. 北京社会科学, 2023(06): 17-27. (CSSCI)
-                <br>Sun Jiuwen, Xiaoxu Xing. Key Characteristics and High-Quality Development Paths of the Modernized Capital Metropolitan Area. Beijing Social Sciences, 2023(06): 17-27. (CSSCI)</a></li>
-            <li><a href="./paper9.pdf" target="_blank">[9] 孙久文, 邢晓旭*. 北交所赋能北京产业结构优化的作用渠道与战略构想. 经济与管理, 2023 37(04): 20-28. (CSSCI 扩)
-                <br>Sun Jiuwen, Xiaoxu Xing*. Strategic Conceptions and Channels for Optimizing Beijing’s Industrial Structure Empowered by the Beijing Stock Exchange. Economics and Management, 2023 37(04): 20-28. (CSSCI Expanded)</a></li>
-            <li><a href="./paper10.pdf" target="_blank">[10] 文余源, 刘洋*, 邢晓旭, 周祖培. 人口收缩视角下中国产业集聚与城市人口规模演化及其关系. 经济地理, 2023 (CSSCI: B)
-                <br>Wen Yuyuan, Liu Yang*, Xing Xiaoxu, Zhou Zupei. Industrial Agglomeration and Urban Population Size Evolution from the Perspective of Population Shrinkage in China. Economic Geography, 2023. (CSSCI: B)</a></li>
+            <li><a href="./paper4.pdf" target="_blank">[4] 冯科, 邢晓旭*. 业绩对赌协议对并购溢价和市场反应的影响. 金融研究, 2023(01): 188-206. (CSSCI: A)</a>
+                <br>Feng Ke, Xiaoxu Xing*. The Impact of Performance Bet Agreements on M&A Premiums and Market Reactions. Financial Research, 2023(01): 188-206. (CSSCI: A)</li>
+            <li><a href="./paper5.pdf" target="_blank">[5] 孙久文, 邢晓旭*. 国土空间体系和区域经济布局的协同路径和优化方向. 经济学家, 2023(08): 54-64. (CSSCI: B)</a>
+                <br>Sun Jiuwen, Xiaoxu Xing*. Coordinated Pathways and Optimization Directions for the National Spatial System and Regional Economic Layout. Economist, 2023(08): 54-64. (CSSCI: B)</li>
+            <li><a href="./paper6.pdf" target="_blank">[6] 孙久文, 邢晓旭. 中国式现代化下县域经济高质量发展的理论与实践. 齐鲁学刊, 2024(01): 111-121. (CSSCI)</a>
+                <br>Sun Jiuwen, Xiaoxu Xing. Theories and Practices of High-Quality Development of County Economies in Chinese Modernization. Qilu Journal, 2024(01): 111-121. (CSSCI)</li>
+            <li><a href="./paper7.pdf" target="_blank">[7] 孙久文, 邢晓旭. 京津冀产业协同发展的成效、挑战和展望. 天津社会科学, 2024(01): 48-57. (CSSCI)</a>
+                <br>Sun Jiuwen, Xiaoxu Xing. Achievements, Challenges, and Prospects of Industrial Coordination in the Beijing-Tianjin-Hebei Region. Tianjin Social Sciences, 2024(01): 48-57. (CSSCI)</li>
+            <li><a href="./paper8.pdf" target="_blank">[8] 孙久文, 邢晓旭. 现代化首都都市圈发展的基本特征与高质量发展路径. 北京社会科学, 2023(06): 17-27. (CSSCI)</a>
+                <br>Sun Jiuwen, Xiaoxu Xing. Key Characteristics and High-Quality Development Paths of the Modernized Capital Metropolitan Area. Beijing Social Sciences, 2023(06): 17-27. (CSSCI)</li>
+            <li><a href="./paper9.pdf" target="_blank">[9] 孙久文, 邢晓旭*. 北交所赋能北京产业结构优化的作用渠道与战略构想. 经济与管理, 2023 37(04): 20-28. (CSSCI 扩)</a>
+                <br>Sun Jiuwen, Xiaoxu Xing*. Strategic Conceptions and Channels for Optimizing Beijing’s Industrial Structure Empowered by the Beijing Stock Exchange. Economics and Management, 2023 37(04): 20-28. (CSSCI Expanded)</li>
+            <li><a href="./paper10.pdf" target="_blank">[10] 文余源, 刘洋*, 邢晓旭, 周祖培. 人口收缩视角下中国产业集聚与城市人口规模演化及其关系. 经济地理, 2023 (CSSCI: B)</a>
+                <br>Wen Yuyuan, Liu Yang*, Xing Xiaoxu, Zhou Zupei. Industrial Agglomeration and Urban Population Size Evolution from the Perspective of Population Shrinkage in China. Economic Geography, 2023. (CSSCI: B)</li>
         </ul>
 
         <h2 class="section-title">实习经历 | Internship Experience</h2>
@@ -136,15 +169,22 @@
                 <a href="computer2.pdf" target="_blank">全国计算机二级</a>，
                 <a href="mathmodel.pdf" target="_blank">美国大学生数学建模大赛 M 奖</a>
             </li>
-            <li>Certifications: 
-                <a href="acca.pdf" target="_blank">ACCA (12/14)</a>, 
-                <a href="cfa1.pdf" target="_blank">CFA Level 1</a>, 
-                <a href="computer2.pdf" target="_blank">National Computer Rank Examination Level 2</a>, 
-                <a href="mathmodel.pdf" target="_blank">American Mathematical Contest in Modeling (M Award)</a>
-            </li>
+            <li>Certifications: ACCA (12/14), CFA Level 1, National Computer Rank Examination Level 2, American Mathematical Contest in Modeling (M Award)</li>
             <li>兴趣爱好：古筝（业余9级），葫芦丝（业余7级），排球，游泳，公益活动</li>
             <li>Interests: GuZheng (Level 9 Amateur), Hulusi (Level 7 Amateur), Volleyball, Swimming, Public Welfare Activities</li>
         </ul>
+     <!-- 增加生活照的部分 -->
+    <div class="life-photo-container">
+        <h2 class="section-title">生活照 | Life Photos</h2>
+        <img src="./life_photo1.jpg" alt="Life Photo 1">
+        <img src="./life_photo2.jpg" alt="Life Photo 2">
+        <img src="./life_photo3.jpg" alt="Life Photo 3">
+        <img src="./life_photo4.jpg" alt="Life Photo 4">
+        <img src="./life_photo5.jpg" alt="Life Photo 5">
+        <img src="./life_photo6.jpg" alt="Life Photo 6">
+        <img src="./life_photo7.jpg" alt="Life Photo 7">
+        <img src="./life_photo8.jpg" alt="Life Photo 8">
+        <img src="./life_photo9.jpg" alt="Life Photo 9">
     </div>
 </body>
 </html>
