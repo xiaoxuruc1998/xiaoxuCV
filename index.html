@@ -22,8 +22,8 @@
             border-radius: 10px;
             margin-top: 50px;
             display: flex;
-            padding-left: 120px;  /* 左右增加空隙 */
-            padding-right: 120px; /* 左右增加空隙 */
+            padding-left: 50px;  /* 左右增加空隙 */
+            padding-right: 50px; /* 左右增加空隙 */
         }
         h1 {
             text-align: center;
@@ -79,8 +79,8 @@
             font-size: 16px; /* 英文字体略大 */
         }
         .main-content {
-            padding-left: 30px; /* 为主要内容添加左右空隙 */
-            padding-right: 30px;
+            padding-left: 100px; /* 为主要内容添加左右空隙 */
+            padding-right: 100px;
         }
         .life-photo-wrapper {
             position: relative;
@@ -199,9 +199,9 @@
     
 <!-- 滚动生活照 -->
 <h2 class="section-title">生活照 | Life Photos</h2>
-<div class="life-photo-wrapper">
+<div class="life-photo-wrapper" style="overflow: hidden;">
     <button class="arrow left" onclick="scrollLeft()">‹</button>
-    <div class="life-photo-container" id="photo-container">
+    <div class="life-photo-container" id="photo-container" style="display: flex; overflow-x: scroll; scroll-behavior: smooth;">
         <img src="./life_photo1.jpg" alt="Life Photo 1">
         <img src="./life_photo2.jpg" alt="Life Photo 2">
         <img src="./life_photo3.jpg" alt="Life Photo 3">
@@ -214,25 +214,14 @@
 </div>
 
 <script>
-    let scrollAmount = 0;
     const container = document.getElementById('photo-container');
 
     function scrollLeft() {
-        const maxScroll = container.scrollWidth - container.clientWidth; 
-        scrollAmount -= 310; // 向左滚动
-        if (scrollAmount < 0) {
-            scrollAmount = 0; // 防止滚动超出左边界
-        }
-        container.style.transform = `translateX(-${scrollAmount}px)`;
+        container.scrollLeft -= 310; // 每次向左滚动的距离
     }
 
     function scrollRight() {
-        const maxScroll = container.scrollWidth - container.clientWidth;
-        scrollAmount += 310; // 向右滚动
-        if (scrollAmount > maxScroll) {
-            scrollAmount = maxScroll; // 防止滚动超出右边界
-        }
-        container.style.transform = `translateX(-${scrollAmount}px)`;
+        container.scrollLeft += 310; // 每次向右滚动的距离
     }
 </script>
 </body>
